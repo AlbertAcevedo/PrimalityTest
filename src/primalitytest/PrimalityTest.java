@@ -45,6 +45,12 @@ public class PrimalityTest {
 		} while (res.compareTo(bottom) < 0 || res.compareTo(top) > 0);
 		return res;
 	}
+	private static BigInteger actualRandom(BigInteger bottom, BigInteger top){
+		Random rnd = new Random();
+		BigInteger res;
+		res = new BigInteger(top.bitLength(), rnd)%(top.subtract(botom).add(BigInteger.ONE)).add(bottom);
+		return res;
+	}
     
     private static boolean isPrime(BigInteger p, int k){
         if (p.compareTo(BigInteger.ONE) <= 0) {
