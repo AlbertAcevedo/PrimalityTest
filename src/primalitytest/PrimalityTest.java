@@ -48,7 +48,7 @@ public class PrimalityTest {
 	private static BigInteger actualRandom(BigInteger bottom, BigInteger top){
 		Random rnd = new Random();
 		BigInteger res;
-		res = new BigInteger(top.bitLength(), rnd).mod((top.subtract(botom).add(BigInteger.ONE)).add(bottom));
+		res = new BigInteger(top.bitLength(), rnd).mod((top.subtract(botom).add(BigInteger.ONE))).add(bottom);
 		return res;
 	}
     
