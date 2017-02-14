@@ -74,7 +74,7 @@ public class PrimalityTest {
         }
         BigInteger a;
         for (int i = 0; i < k; i++) {
-            a = uniformRandom(TWO, p.subtract(ONE));
+            a = actualRandom(TWO, p.subtract(ONE));
             if (!a.modPow(p.subtract(ONE), p).equals(ONE)) {
                 return false;
             }
