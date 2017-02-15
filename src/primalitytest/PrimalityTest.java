@@ -48,7 +48,7 @@ public class PrimalityTest {
 	private static BigInteger actualRandom(BigInteger bottom, BigInteger top){
 		Random rnd = new Random();
 		BigInteger res;
-		res = new BigInteger(top.bitLength(), rnd).mod((top.subtract(botom).add(BigInteger.ONE))).add(bottom);
+		res = new BigInteger(top.bitLength(), rnd).mod((top.subtract(bottom).add(BigInteger.ONE))).add(bottom);
 		return res;
 	}
     
@@ -86,19 +86,19 @@ public class PrimalityTest {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        boolean active = true;
-//        while(active){
-//        BigInteger n = sc.nextBigInteger();
-//            if (n.equals(new BigInteger("-1"))) {
-//                active = false;
-//            }
-//            else{
-//                boolean isPrime = isPrime(n, 10);
-//                System.out.println(isPrime);
-//            }
-//        }
+        boolean active = true;
+        while(active){
         BigInteger n = sc.nextBigInteger();
-        System.out.println(isPrime(n,10));
+            if (n.equals(new BigInteger("-1"))) {
+                active = false;
+            }
+            else{
+                boolean isPrime = isPrime(n, 10);
+                System.out.println(isPrime);
+            }
+        }
+//        BigInteger n = sc.nextBigInteger();
+//        System.out.println(isPrime(n,10));
         // TODO code application logic here
     }
     
